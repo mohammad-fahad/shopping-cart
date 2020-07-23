@@ -25,8 +25,8 @@
 
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button class="btn btn-default"><i id="first-minus"class="fas fa-minus"></i></button>
-                           <input type="text" class="form-control text-center" value="1">
+                           <button class="btn btn-default"><i id="first-minus" class="fas fa-minus"></i></button>
+                           <input type="text" id="current-number" class="form-control text-center" value="1">
                            <button class="btn btn-default"><i id="first-plus" class="fas fa-plus"></i></button>
                         </div>
                         <h5>$ <span id="first-total">1219</span></h5>
@@ -44,7 +44,7 @@
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
                            <button class="btn btn-default"><i id="second-minus" class="fas fa-minus"></i></button>
-                           <input type="text" class="form-control text-center" value="1">
+                           <input type="text" id="second-current" class="form-control text-center" value="1">
                            <button class="btn btn-default"><i id="second-plus" class="fas fa-plus"></i></button>
 
                         </div>
@@ -77,6 +77,30 @@
          </div>
       </div>
    </section>
+   <script>
+      // plus button event handler
+      const toPlus = document.getElementById('first-plus');
+      toPlus.addEventListener('click', function () {
+         const afterPlus = document.getElementById('current-number').value;
+         const plusNumber = parseInt(afterPlus) + 1;
+         document.getElementById('current-number').value = plusNumber;
+        
+      })
+
+      //  minus button event handler
+      const toMinus = document.getElementById('first-minus');
+      toMinus.addEventListener('click', function () {
+         const afterMinus = document.getElementById('current-number').value;
+         const minusNumber = parseInt(afterMinus) - 1;
+         document.getElementById('current-number').value = minusNumber;
+      })  
+
+      // first total amount event handler
+      const firstTotal = document.getElementById('first-total');
+      
+
+
+   </script>
 </body>
 
 </html>
