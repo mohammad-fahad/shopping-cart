@@ -84,6 +84,7 @@
          const afterPlus = document.getElementById('current-number').value;
          const plusNumber = parseInt(afterPlus) + 1;
          document.getElementById('current-number').value = plusNumber;
+     
          
          // first total amount after+ event handler
          const afterEventTotal = document.getElementById('first-total').innerText;
@@ -100,11 +101,13 @@
          const afterMinus = document.getElementById('current-number').value;
          const minusNumber = parseInt(afterMinus) - 1;
          document.getElementById('current-number').value = minusNumber;
+         
 
          //  first total amount after- event handler
          const afterMinusEventTotal = document.getElementById('first-total').innerText;
          const minusTotalNumber = parseInt(minusNumber) * 1219;
          document.getElementById('first-total').innerText = minusTotalNumber;
+         
 
          subTotal();
       })
@@ -139,7 +142,7 @@
 
          subTotal();
       })
-      //  Updating sub total
+      
       
 
       // subtotal function 
@@ -150,21 +153,21 @@
          document.getElementById('sub-total').innerText = subTotal;
          
       }
-
-      // plus handler function
-      function plusHandler(){
-         const afterPlus = document.getElementById('current-number').value;
-         const plusNumber = parseInt(afterPlus) + 1;
-         document.getElementById('current-number').value = plusNumber;
+      //  This part does not work properly :(
+      // // plus handler function
+      // function plusHandler(id){
+      //    const afterPlus = document.getElementById('id').value;
+      //    const plusNumber = parseInt(afterPlus) + 1;
+      //    document.getElementById('id').value = plusNumber;
          
-         // first total amount after+ event handler
-         const afterEventTotal = document.getElementById('first-total').innerText;
-         const firstTotalNumber = parseInt(plusNumber) * 1219;
-         document.getElementById('first-total').innerText = firstTotalNumber;
+      //    // first total amount after+ event handler
+      //    const afterEventTotal = document.getElementById('first-total').innerText;
+      //    const firstTotalNumber = parseInt(plusNumber) * 1219;
+      //    document.getElementById('first-total').innerText = firstTotalNumber;
 
          
 
-      }
+      // }
 
 
 
