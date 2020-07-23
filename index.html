@@ -84,7 +84,12 @@
          const afterPlus = document.getElementById('current-number').value;
          const plusNumber = parseInt(afterPlus) + 1;
          document.getElementById('current-number').value = plusNumber;
-        
+
+         // first total amount after+ event handler
+         const afterEventTotal = document.getElementById('first-total').innerText;
+         const firstTotalNumber = parseInt(plusNumber) * 1219;
+         document.getElementById('first-total').innerText = firstTotalNumber;
+
       })
 
       //  minus button event handler
@@ -93,11 +98,18 @@
          const afterMinus = document.getElementById('current-number').value;
          const minusNumber = parseInt(afterMinus) - 1;
          document.getElementById('current-number').value = minusNumber;
-      })  
 
-      // first total amount event handler
-      const firstTotal = document.getElementById('first-total');
-      
+         //  first total amount after- event handler
+         const afterMinusEventTotal = document.getElementById('first-total').innerText;
+         const minusTotalNumber = parseInt(minusNumber) * 1219;
+         document.getElementById('first-total').innerText = minusTotalNumber;
+      })
+
+
+
+
+
+
 
 
    </script>
