@@ -78,21 +78,23 @@
       </div>
    </section>
    <script>
-      // plus button event handler
+      //  first plus button event handler
       const toPlus = document.getElementById('first-plus');
       toPlus.addEventListener('click', function () {
          const afterPlus = document.getElementById('current-number').value;
          const plusNumber = parseInt(afterPlus) + 1;
          document.getElementById('current-number').value = plusNumber;
-
+         
          // first total amount after+ event handler
          const afterEventTotal = document.getElementById('first-total').innerText;
          const firstTotalNumber = parseInt(plusNumber) * 1219;
          document.getElementById('first-total').innerText = firstTotalNumber;
 
+         subTotal();
+
       })
 
-      //  minus button event handler
+      //  first minus button event handler
       const toMinus = document.getElementById('first-minus');
       toMinus.addEventListener('click', function () {
          const afterMinus = document.getElementById('current-number').value;
@@ -103,7 +105,66 @@
          const afterMinusEventTotal = document.getElementById('first-total').innerText;
          const minusTotalNumber = parseInt(minusNumber) * 1219;
          document.getElementById('first-total').innerText = minusTotalNumber;
+
+         subTotal();
       })
+
+      // second plus button event handler
+      const toSecondPlus = document.getElementById('second-plus');
+      toSecondPlus.addEventListener('click', function () {
+         const afterSecondPlus = document.getElementById('second-current').value;
+         const plusSecondNumber = parseInt(afterSecondPlus) + 1;
+         document.getElementById('second-current').value = plusSecondNumber;
+
+         // second total amount after+ event handler
+         const afterSecondEventTotal = document.getElementById('second-total').innerText;
+         const secondTotalNumber = parseInt(plusSecondNumber) * 59;
+         document.getElementById('second-total').innerText = secondTotalNumber;
+
+         subTotal();
+
+      })
+
+      //  second minus button event handler
+      const toSecondMinus = document.getElementById('second-minus');
+      toSecondMinus.addEventListener('click', function () {
+         const afterSecondMinus = document.getElementById('second-current').value;
+         const minusSecondNumber = parseInt(afterSecondMinus) - 1;
+         document.getElementById('second-current').value = minusSecondNumber;
+
+         //  second  total amount after- event handler
+         const afterSecondMinusEventTotal = document.getElementById('second-total').innerText;
+         const secondMinusTotalNumber = parseInt(minusSecondNumber) * 59;
+         document.getElementById('second-total').innerText = secondMinusTotalNumber;
+
+         subTotal();
+      })
+      //  Updating sub total
+      
+
+      // subtotal function 
+      function subTotal() {
+         const priceOfItem1 = document.getElementById('first-total').innerText;
+         const priceOfItem2 = document.getElementById('second-total').innerText;
+         const subTotal = parseInt(priceOfItem1) + parseInt(priceOfItem2);
+         document.getElementById('sub-total').innerText = subTotal;
+         
+      }
+
+      // plus handler function
+      function plusHandler(){
+         const afterPlus = document.getElementById('current-number').value;
+         const plusNumber = parseInt(afterPlus) + 1;
+         document.getElementById('current-number').value = plusNumber;
+         
+         // first total amount after+ event handler
+         const afterEventTotal = document.getElementById('first-total').innerText;
+         const firstTotalNumber = parseInt(plusNumber) * 1219;
+         document.getElementById('first-total').innerText = firstTotalNumber;
+
+         
+
+      }
 
 
 
