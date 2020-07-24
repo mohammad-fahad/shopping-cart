@@ -91,7 +91,7 @@
          const firstTotalNumber = parseInt(plusNumber) * 1219;
          document.getElementById('first-total').innerText = firstTotalNumber;
 
-         subTotal();
+         subTotalAndTotal();
 
       })
 
@@ -109,7 +109,7 @@
          document.getElementById('first-total').innerText = minusTotalNumber;
          
 
-         subTotal();
+         subTotalAndTotal();
       })
 
       // second plus button event handler
@@ -124,7 +124,7 @@
          const secondTotalNumber = parseInt(plusSecondNumber) * 59;
          document.getElementById('second-total').innerText = secondTotalNumber;
 
-         subTotal();
+         subTotalAndTotal();
 
       })
 
@@ -140,25 +140,28 @@
          const secondMinusTotalNumber = parseInt(minusSecondNumber) * 59;
          document.getElementById('second-total').innerText = secondMinusTotalNumber;
 
-         subTotal();
+         subTotalAndTotal();
       })
       
       
 
       // subtotal function 
-      function subTotal() {
+      function subTotalAndTotal() {
          const priceOfItem1 = document.getElementById('first-total').innerText;
          const priceOfItem2 = document.getElementById('second-total').innerText;
          const subTotal = parseInt(priceOfItem1) + parseInt(priceOfItem2);
          document.getElementById('sub-total').innerText = subTotal;
-         
+         // adding total
+         const totalPrice = parseInt(priceOfItem1) + parseInt(priceOfItem2);
+         document.getElementById('total').innerText = totalPrice;
+               
       }
       //  This part does not work properly :(
-      // // plus handler function
-      // function plusHandler(id){
-      //    const afterPlus = document.getElementById('id').value;
+      // plus handler function
+      // function plusHandler(id, 'parameter'){
+      //    const afterPlus = document.getElementById(id).value;
       //    const plusNumber = parseInt(afterPlus) + 1;
-      //    document.getElementById('id').value = plusNumber;
+      //    document.getElementById('parameter).value = plusNumber;
          
       //    // first total amount after+ event handler
       //    const afterEventTotal = document.getElementById('first-total').innerText;
